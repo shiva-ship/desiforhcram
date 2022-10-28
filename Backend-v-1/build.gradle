@@ -15,9 +15,6 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	// https://mvnrepository.com/artifact/org.springframework/spring-web
-	implementation 'org.springframework:spring-web:5.3.23'
-
 }
 
 tasks.named('test') {
