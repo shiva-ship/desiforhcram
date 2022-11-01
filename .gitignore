@@ -1,3 +1,7 @@
+# platform files
+.idea 
+.angular
+
 # Logs
 logs
 *.log
