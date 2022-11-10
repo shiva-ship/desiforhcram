@@ -1,3 +1,3 @@
 Home page
--GRAPH
+-GRAPH {https://www.syncfusion.com/blogs/post/create-beautiful-charts-in-angular.aspx; }
 -LINKED TILES
