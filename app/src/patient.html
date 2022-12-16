@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <title>Dhanvantari</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- <script src="js/bundle.js"></script> -->
+    
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        /* padding-top: 70px; */
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    /* .navbar{
+        margin-bottom: 70px;
+    } */
+    .panel-heading{
+        margin-bottom: 20px;
+    }
+    .panel{
+        margin-bottom: 60px;
+    }
+    /* .publicKeyDoctor{
+        display: none;
+    } */
+    .well > h3{
+        margin: 10px auto;
+    }
+    .checkbox label:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .checkbox .cr {
+        position: relative;
+        display: inline-block;
+        border: 1px solid #a9a9a9;
+        border-radius: .25em;
+        width: 1.3em;
+        height: 1.3em;
+        float: left;
+        margin-right: .5em;
+    }
+
+    .checkbox .cr .cr-icon {
+        position: absolute;
+        font-size: .8em;
+        line-height: 0;
+        top: 50%;
+        left: 15%;
+    }
+
+    .checkbox label input[type="checkbox"] {
+        display: none;
+    }
+
+    .checkbox label input[type="checkbox"]+.cr>.cr-icon {
+        opacity: 0;
+    }
+
+    .checkbox label input[type="checkbox"]:checked+.cr>.cr-icon {
+        opacity: 1;
+    }
+    </style>
+</head>
+
+<body style="background-image: url('img/background.jpeg'); background-size: cover;">
+
+        <!-- Navigation -->
+        <!-- <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <!-- <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">SwasthyaChain</a>
+                </div> -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="./index.html">Logout</a>
+                        </li>
+                    </ul>
+                </div> -->
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        <!-- </nav> -->
+        
+        <nav class="navbar navbar-expand-lg navbar-dark rounded-0">
+            <div class="container-fluid">
+                <div class="container">
+                <a class="navbar-brand fs-1 mt-4" href="#">
+                    <i class="fas fa-dna"></i>
+                    Dhanvantari
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li> -->
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right mt-4">
+                        <li>
+                            <a class="btn btn-outline-light px-3 py-2 fs-4" href="./index.html">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+          </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="panel panel-default col-5 mx-3 p-0 mb-5 shadow">
+                    <div class="panel-heading mb-0">
+                        <h1 class="fs-2">Personal Information</h1>
+                    </div>
+                    <div class="panel-body fs-4">
+                        <table class="table">
+                            <tr>
+                                <th>Name:</th>
+                                <td id="name"></td>
+                            </tr>
+                            <tr>
+                                <th>Age:</th>
+                                <td id="age"></td>
+                            </tr>
+                        </table>
+                                
+                        <!-- <div class="text-center">
+                                <h5>Your records are stored here: http://localhost:8080/ipfs/<span id="recordsHash"></span></h5>
+                            <button type="submit" class="btn btn-info btn-lg" onclick="showRecords(this)">View medical records</button>
+                            
+                        </div>
+                        <pre id="records" style="margin-top: 20px;">
+
+                        </pre> -->
+                    </div>
+                </div>
+                <div class="panel panel-default col-5 mx-3 p-0 mb-5 shadow">
+                    <div class="panel-heading mb-1">
+                        <h2 class="">Share your Medical Record</h2>
+                    </div>
+                    <div class="panel-body py-2">
+                        <div class="row">
+                            <div class="alert alert-info col-sm-8 col-sm-offset-2">
+                                <strong>Info!</strong> The doctor already has access to your records. Revoke access or wait for time duration to end to continue.
+                            </div>
+                        </div>
+    
+                        
+                        <form class="form-horizontal fs-4" action="/action_page.php">
+                            <div class="form-group px-4"> 
+                                <label for="permitDoctorList" class="control-label">Doctor:</label>
+                                <select class="form-select form-select-lg" id="permitDoctorList">
+                                    <option selected disabled>-- Please Select --</option>
+                                </select>
+                            </div>
+                        </form>
+                        <div class="text-right mb-3">
+                            <button onclick = "giveAccess()" class="btn btn-primary btn-lg bg-blue">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+           
+            <div class="panel panel-default mb-5 shadow">
+                <div class="panel-heading text-left mb-0">
+                    <h2 class="fs-2">Medical Records</h2>
+                </div>
+                <div class="panel-body">
+                    <!-- <table class="table">
+                        <tr>
+                            <th>Name:</th>
+                            <td id="name"></td>
+                        </tr>
+                        <tr>
+                            <th>Age:</th>
+                            <td id="age"></td>
+                        </tr>
+                    </table> -->
+                    
+                    <div class="fs-4">
+                        <div>Your records are stored here: 
+                            http://localhost:8080/ipfs/<span id="recordsHash"></span>
+                        </div>
+
+                        
+                        <!-- <button type="submit" class="btn btn-info btn-lg my-3" onclick="showRecords(this)">View medical records</button> -->
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-info btn-lg my-3 bg-blue text-light" data-bs-toggle="modal" data-bs-target="#recordModal">
+                            View medical records
+                        </button>
+                        <!-- <pre id="records" style="margin-top: 20px;" class="fs-4">
+
+                        </pre> -->
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="panel panel-default border-0">
+                <div class="panel-heading mb-2">
+                    <h2 class="">Current EMR access holders</h2>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="alert alert-danger col-sm-8 col-sm-offset-2">
+                            <strong>Notice!</strong> The access could not be revoked. Please retry or contact admin.
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- <div class="col-sm-offset-1 col-sm-10">
+                            <table id="accessDoc" class="table table-hover">
+                                <tr>
+                                    <th>Doctor</th>
+                                    <th class="publicKeyDoctor">Public Key</th>
+                                    <th>Revoke access</th>
+                                </tr>
+                            </table>
+                        </div> -->
+                        <div class="row px-0" id="accessDocTest"></div>
+                    </div>
+
+                </div>
+            </div>           
+        </div>
+        
+        <!-- Record Modal -->
+        <div class="modal" id="recordModal" tabindex="-1" aria-labelledby="recordModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content py-2 px-4">
+                <div class="modal-header">
+                <h2 class="modal-title" id="recordModalLabel">Your medical report</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <pre id="records" class="fs-4">Click refresh to load latest records...</pre>
+                    <button type="button" class="btn btn-lg btn-success" onclick="showRecords()">
+                        Refresh  <i class="fas fa-sync-alt"></i>
+                    </button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script src="/js/web3.min.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var key ;
+
+    toggleRecordsButton = 0;
+    var recordHash = "";
+
+    $(window).load(function() {
+        connect();
+        // $("#records").hide();
+        $(".alert-info").hide();
+        $(".alert-danger").hide();
+        key = web3.currentProvider.selectedAddress;
+        key = key.toLocaleLowerCase();
+
+        var a = "";
+        var b = 0;
+        var ailments = [];
+        var insurerName = "";
+
+        $("#buyInsurance").hide();
+        $("#insuranceInfo").hide();
+        
+        // print patient details and insurer details (if exists). If insurer does not exist show the buy insurance panel
+        console.log("Getting Patient Data");
+        contractInstance.get_patient.call(key, {gas: 1000000}, function(error, result){
+            console.log("Patient Data Result:"+result);
+            if(!error){
+                console.log(result);
+                a = result[0]; 
+                b = result[1];
+                ailments = result[2];
+                insurerAddress = result[3];
+                recordHash = result[4];
+                $("#name").html(a);
+                $("#age").html(b.c[0]);
+                $("#recordsHash").html(recordHash);
+
+                if (insurerAddress != 0){
+                    $("#buyInsurance").hide();
+
+
+                } else {
+                    var InsurerList = 0;
+                    
+                    contractInstance.get_insurer_list({gas: 1000000}, function(error, result){
+
+                        if(!error){
+                            
+                            InsurerList = result;
+                            var list = document.getElementById("insurers");
+                            for (var i = 0; i < InsurerList.length; i++) {
+                                
+                                contractInstance.get_insurer.call(InsurerList[i], {gas: 1000000}, function(error, result){
+                                    
+                                    
+                                    if(!error){
+                                        d = result[0];
+
+                                        var option = document.createElement("option");
+                                        option.text = d;
+
+                                        list.add(option);
+                                    } else{
+                                        console.log(error);
+                                    }
+                                })
+                            }
+                        }
+                    })
+                    $("#buyInsurance").show();
+
+                    $("#insuranceInfo").hide();
+                }
+            }
+            else
+                console.error(error);
+        });
+        
+        // print out the doctors to share emr
+        var DoctorList = 0;
+        console.log("Getting Doctor List");
+        contractInstance.get_doctor_list({gas: 1000000},function(error, result){
+
+            if(!error) {
+
+                DoctorList = result;
+
+                for(var i = 0; i < DoctorList.length; i++) {
+                    contractInstance.get_doctor.call(DoctorList[i], {gas: 1000000},function(error, result){
+
+                        var list = document.getElementById("permitDoctorList");
+
+                        if(!error) {
+                            [a, b] = result; 
+                            var option = document.createElement("option");
+                            option.text = a;
+                            list.add(option);
+                            // console.log(a);
+                        }
+                        else
+                            console.error(error);
+                    })
+                }
+            } 
+            else
+                console.error(error);
+        });
+
+        // print out the doctors who have access
+        var doctorAddressList = 0;
+        contractInstance.get_accessed_doctorlist_for_patient(key, {gas: 1000000}, function(error, result){
+            if(!error){
+                doctorAddressList = result;
+                console.log(result);
+                
+               
+                doctorAddressList.forEach(function(doctorAddress, index){
+                    contractInstance.get_doctor.call(doctorAddress, {gas: 1000000}, function(error, result){
+                        var table = document.getElementById("accessDoc");
+                        var tableTest = document.getElementById("accessDocTest");
+                        
+                        if(!error) {
+                            [a,b] = result;
+                            
+                            // var row = table.insertRow(index+1);
+                            // var cell1 = row.insertCell(0);
+                            // var cell2 = row.insertCell(1);
+                            // var cell3 = row.insertCell(2);
+                            // cell2.className = "publicKeyDoctor";
+                            // cell1.innerHTML = a;
+                            // cell2.innerHTML = doctorAddress;
+                            // cell3.innerHTML = '<button onclick="revokeAccess(this)" class="btn btn-danger">Revoke access</button>';
+                            
+                            for (let i = 0; i < 4; ++i) {
+                                tableTest.innerHTML += `
+                            <div class="col-3 my-2">
+                                <div class="card shadow px-2 py-2">
+                                    <div class="card-body">
+                                        <h3 class="card-title mb-2">
+                                            ${a} 
+                                        </h3>
+                                        <h6 class="card-subtitle mb-4 text-muted fwt-normal">${doctorAddress}</h6>
+                                        <button onclick="revokeAccess(this, '${doctorAddress}')" class="btn btn-outline-danger mt-2 ms-auto">
+                                            <i class="fas fa-trash"></i> Revoke access
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>`;
+                            }
+                            
+                            
+                        }
+                        else
+                            console.error(error);
+                    })
+                })
+            }
+            else 
+                console.error(error);
+        });
+
+    });
+    function showRecords(element){
+            $.get("http://localhost:8080/ipfs/"+recordHash, function(data){
+                $("#recordModal #records").html(data);
+            })        
+    }
+
+    
+
+    function giveAccess() {
+
+        var list = document.getElementById("permitDoctorList");
+        index = list.selectedIndex;
+
+        var DoctorList = 0;
+
+        contractInstance.get_doctor_list({gas: 1000000}, function(error, result){
+
+            if(!error) {
+                // console.log(index);
+
+                DoctorList = result;
+                doctorToBeAdded = DoctorList[index-1];
+                contractInstance.permit_access.sendTransaction(doctorToBeAdded, {from: key, gas: 1000000, value: web3.toWei(2, 'ether')}, function(error){
+                    console.log(error);
+                    if (!error) {
+                        var table = document.getElementById("accessDoc");
+                        var tableTest = document.getElementById("accessDocTest");
+                        
+                        // noRows = table.rows.length;
+                        // var row = table.insertRow(noRows);
+                        // var cell1 = row.insertCell(0);
+                        // var cell2 = row.insertCell(1);
+                        // var cell3 = row.insertCell(2);
+
+                        // cell2.className = "publicKeyDoctor";
+                        // cell1.innerHTML = $("#permitDoctorList").val();
+                        // cell2.innerHTML = doctorToBeAdded;
+                        // cell3.innerHTML = '<button onclick="revokeAccess(this)" class="btn btn-danger">Revoke access</button>';
+                        
+                        tableTest.innerHTML += `
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h3 class="card-title mb-2">
+                                        ${$("#permitDoctorList").val()}
+                                    </h3>
+                                    <h6 class="card-subtitle mb-4 text-muted fwt-normal">${doctorToBeAdded}</h6>
+                                    <button onclick="revokeAccess(this, '${doctorToBeAdded}')" class="btn btn-sm btn-outline-danger mt-2">
+                                        <i class="fas fa-trash"></i> Revoke access
+                                    </button>
+                                </div>
+                            </div>`;
+
+                    } else {
+                        $(".alert-info").show();
+                        console.log(error);
+                    }
+                                            
+                })
+
+            } else
+                console.log(error);
+        })
+    }
+
+    function revokeAccess(element, docKey) {
+
+        // rowNo = element.parentNode.parentNode.rowIndex;
+        // Row = element.parentNode.parentNode;
+        // var Cells = Row.getElementsByTagName("td");
+        // var docKey = Row.cells[1].firstChild.nodeValue;
+        console.log(docKey);
+        contractInstance.revoke_access(docKey, {gas: 1000000}, function(error){
+            if (!error) {
+                // document.getElementById("accessDoc").deleteRow(rowNo);
+                console.log(element.parentNode.parentNode);
+                element.parentNode.parentNode.remove();
+            } else {
+                $(".alert-danger").show();
+                console.log(error);
+            }
+                                    
+        });
+    }
+
+    
+
+</script>
+
+</body>
+
+</html>
